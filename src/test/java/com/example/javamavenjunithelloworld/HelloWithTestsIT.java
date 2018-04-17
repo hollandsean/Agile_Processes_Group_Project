@@ -27,7 +27,7 @@ public class HelloWithTestsIT {
         String[] args = {"1"};
         HelloApp.main(args);
 
-        assertThat(out.getLog(), is(equalTo(Hello.HELLO + "\n")));
+        assertThat(out.getLog(), is(equalTo(Hello.HELLO + System.getProperty("line.separator"))));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class HelloWithTestsIT {
         String[] args = {"3"};
         HelloApp.main(args);
 
-        String thrice = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
+        String thrice = Hello.HELLO + System.getProperty("line.separator") + Hello.HELLO + System.getProperty("line.separator") + Hello.HELLO + System.getProperty("line.separator");
         assertThat(out.getLog(), is(equalTo(thrice)));
     }
 }
