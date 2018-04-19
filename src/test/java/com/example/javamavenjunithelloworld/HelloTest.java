@@ -37,7 +37,7 @@ public class HelloTest {
         hi.sayHello(stream);
 
         // Does it say "Hello!" three times?
-        String goal = Hello.HELLO + System.getProperty("line.separator") + Hello.HELLO + System.getProperty("line.separator") + Hello.HELLO + System.getProperty("line.separator");
+        String goal = Hello.HELLO + " " + Hello.HELLO + System.getProperty("line.separator") + Hello.HELLO + System.getProperty("line.separator");
         assertThat(os.toString(), is(equalTo(goal)));
     }
 
